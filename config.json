@@ -1,0 +1,10 @@
+{
+  "settings": {
+    "client": "both",
+    "game_directory": "F:/games/World of Warcraft"
+  },
+  "retail": {},
+  "classic": {},
+  "beta": {},
+  "ptr": {}
+}
