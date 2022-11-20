@@ -32,6 +32,18 @@ func downloadPackage(version string) {
 	io.Copy(out, resp.Body)
 }
 
+func checkLocalVersion(version string) bool {
+	_, err := os.Stat("elvui-" + version + ".zip")
+	if err != nil {
+		if os.IsNotExist(err) {
+			fmt.Println(err)
+			return false
+		}
+		return false
+	}
+	return true
+}
+
 func checkRemoteVersion() string {
 	var rv string = ""
 
@@ -48,6 +60,7 @@ func checkRemoteVersion() string {
 	})
 
 	c.OnHTML(".hidden-xs", func(e *colly.HTMLElement) {
+		// Find func to catch ElvUI only and update this func / maybe update major version if needed
 		if strings.Contains(e.Text, "13") {
 			rv = e.Text
 		}
@@ -59,13 +72,12 @@ func checkRemoteVersion() string {
 }
 
 func main() {
-	if len(os.Args) < 2 {
-		fmt.Print("Please specify your ElvUI version you need")
-		return
-	}
-
 	remoteVersion := checkRemoteVersion()
 	fmt.Println(remoteVersion)
-	version := os.Args[1]
+
+	if checkLocalVersion(remoteVersion) {
+		fmt.Println("You already the latest version of ElvUI")
+		return
+	}
 	downloadPackage(version)
 }
