@@ -76,7 +76,7 @@ func main() {
 	fmt.Println(remoteVersion)
 
 	if checkLocalVersion(remoteVersion) {
-		fmt.Println("You already the latest version of ElvUI")
+		fmt.Println("You already have the latest version of ElvUI")
 		return
 	}
 	downloadPackage(version)
