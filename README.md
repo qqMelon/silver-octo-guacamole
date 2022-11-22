@@ -4,12 +4,12 @@ This project is just for update your version of ElvUI addon of World of Warcraft
 
 ## TODO
 
-[x] Check remote version on ElvUI website
+- [x] Check remote version on ElvUI website
   * Upgrade the check without input of major version
-[x] Check if remote version is different between our and it
-[x] Download `.zip` file if the previous condition is true
-[ ] Unzip `.zip` file downloaded
-[ ] Only replace file and no delete the older ones
+- [x] Check if remote version is different between our and it
+- [x] Download `.zip` file if the previous condition is true
+- [ ] Unzip `.zip` file downloaded
+- [ ] Only replace file and no delete the older ones
 
 ## Enhancement program
 
