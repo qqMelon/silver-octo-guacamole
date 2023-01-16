@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"os"
 	"strings"
+    "time"
 
 	"github.com/gocolly/colly"
 	"github.com/qqMelon/silver-octo-guacamole/script"
@@ -84,4 +85,5 @@ func main() {
 	fmt.Println("Extracting...")
 	script.Unzip("elvui-"+remoteVersion+".zip", "Addons/")
 	fmt.Println("Extracting done at : Addons/")
+    time.Sleep(3 * time.Second)
 }
