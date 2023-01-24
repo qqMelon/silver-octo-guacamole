@@ -2,6 +2,8 @@
 
 This project is just for update your version of ElvUI addon of World of Warcraft or install it quickly
 
+For use it, place the binary in: `World of Warcraft\Interface\<here>\Addons`. You can create shortcut for the program and launch it everywhere !
+
 ## TODO
 
 - [x] Check remote version on ElvUI website
@@ -9,8 +11,10 @@ This project is just for update your version of ElvUI addon of World of Warcraft
 - [x] Check if remote version is different between our and it
 - [x] Download `.zip` file if the previous condition is true
 - [x] Unzip `.zip` file downloaded
-- [ ] Only replace file and no delete the older ones
+- [x] Only replace file and no delete the older ones
 
 ## Enhancement program
+
+***Working ...***
 
 I try to use the **CurseForge** API to update all addons already installed
