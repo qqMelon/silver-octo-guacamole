@@ -10,6 +10,7 @@ import (
 
 func CheckRemoteVersion() string {
 	var rv string = ""
+	var baseUrl string = "https://www.tukui.org/"
 
 	c := colly.NewCollector(
 		colly.AllowedDomains("www.tukui.org"),

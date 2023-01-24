@@ -8,7 +8,7 @@ import (
 )
 
 func DownloadPackage(version string) {
-	baseUrl := "https://www.tukui.org/"
+	var baseUrl string = "https://www.tukui.org/"
 	url := fmt.Sprintf(baseUrl+"downloads/elvui-%s", version+".zip")
 	resp, err := http.Get(url)
 	if err != nil {
