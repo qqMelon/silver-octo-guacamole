@@ -15,7 +15,9 @@ func main() {
 		fmt.Println("You already have the latest version of ElvUI")
 		return
 	}
+	fmt.Println("Downloading ElvUI...")
 	script.DownloadPackage(remoteVersion)
+	fmt.Println("Download complete")
 	fmt.Println("Extracting...")
 	script.Unzip("elvui-"+remoteVersion+".zip", "Addons/")
 	fmt.Println("Extracting done at : Addons/")
