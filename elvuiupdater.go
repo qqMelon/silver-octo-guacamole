@@ -13,6 +13,7 @@ func main() {
 
 	if script.CheckLocalVersion(remoteVersion) {
 		fmt.Println("You already have the latest version of ElvUI")
+		time.Sleep(3 * time.Second)
 		return
 	}
 	fmt.Println("Downloading ElvUI...")

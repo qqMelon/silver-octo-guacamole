@@ -15,6 +15,14 @@ For use it, place the binary in: `World of Warcraft\Interface\<here>\Addons`. Yo
 
 ## Enhancement program
 
-***Working ...***
-
 I try to use the **CurseForge** API to update all addons already installed
+
+## TDOD
+
+- [x] Update addons already installed
+  - [x] List all addons
+  - [ ] Only get the addon dir, not the annexes dirs
+  - [ ] Add **CurseForge** API to update addon
+- [ ] Search and install addons
+  - [ ] CLI tool ? Or UI tool ?
+  - *Working ....*
