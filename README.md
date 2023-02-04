@@ -17,7 +17,7 @@ For use it, place the binary in: `World of Warcraft\Interface\<here>\Addons`. Yo
 
 I try to use the **CurseForge** API to update all addons already installed
 
-## TDOD
+## TODO
 
 - [x] Update addons already installed
   - [x] List all addons
