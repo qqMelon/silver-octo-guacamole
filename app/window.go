@@ -17,10 +17,15 @@ func Window() {
 	updateBtn := Button("Speed update", "speedUpdate")
 	manageBtn := Button("Manage addons", "manageAddon")
 
-	content := container.New(layout.NewHBoxLayout(), elvuiBtn, updateBtn, manageBtn)
-	mainContent := container.New(layout.NewVBoxLayout(), desc, content, ActionStatus())
+	btnContainer := container.New(layout.NewHBoxLayout(), elvuiBtn, updateBtn, manageBtn)
+	desContainer := container.New(layout.NewHBoxLayout(), desc)
 
-	w.SetContent(container.New(layout.NewCenterLayout(), mainContent))
+	//mainContent := container.New(layout.NewVBoxLayout(), desc, content, ActionStatus())
+
+	centeredBtnContainer := container.New(layout.NewHBoxLayout(), layout.NewSpacer(), btnContainer, layout.NewSpacer())
+	centeredDescContainer := container.New(layout.NewHBoxLayout(), layout.NewSpacer(), desContainer, layout.NewSpacer())
+
+	w.SetContent(container.New(layout.NewVBoxLayout(), centeredDescContainer, centeredBtnContainer))
 
 	w.ShowAndRun()
 }
