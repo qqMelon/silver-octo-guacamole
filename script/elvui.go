@@ -118,5 +118,5 @@ func Elvui() (error, string) {
 	downloadPackage(remoteVersion)
 	unzip("elvui-"+remoteVersion+".zip", "Addons/")
 
-	return nil, fmt.Sprintf("Successfully download and extract ElvUI-%s at: AddOns/", remoteVersion)
+	return nil, fmt.Sprintf("Successfully download and install ElvUI: %s", remoteVersion)
 }
