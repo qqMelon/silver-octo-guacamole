@@ -37,6 +37,7 @@ require (
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/gopherjs/gopherjs v1.17.2 // indirect
 	github.com/jackmordaunt/icns/v2 v2.2.1 // indirect
+	github.com/joho/godotenv v1.5.1 // indirect
 	github.com/josephspurrier/goversioninfo v1.4.0 // indirect
 	github.com/jsummers/gobmp v0.0.0-20151104160322-e2ba15ffa76e // indirect
 	github.com/kennygrant/sanitize v1.2.4 // indirect

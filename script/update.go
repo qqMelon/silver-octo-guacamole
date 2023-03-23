@@ -3,6 +3,8 @@ package script
 import (
 	"bytes"
 	"fmt"
+	"github.com/joho/godotenv"
+	"log"
 	"net/http"
 	"os"
 )
@@ -10,9 +12,15 @@ import (
 var baseUrl = "https://api.curseforge.com"
 
 func getGame() {
+	err := godotenv.Load(".env")
+	if err != nil {
+		log.Fatal("Unable to load env file ...")
+	}
+
 	headers := map[string][]string{
-		"Accept":    {"application/json"},
-		"x-api-key": {os.Getenv("API_KEY")},
+		"Accept":    []string{"application/json"},
+		"Host":      {"api.curseforge.com"},
+		"x-api-key": []string{os.Getenv("API_KEY")},
 	}
 
 	data := bytes.NewBuffer([]byte{})
